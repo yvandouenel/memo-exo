@@ -1,0 +1,15 @@
+body {
+  background-color:#6C757D;
+}
+#cartes {
+  display: flex;
+  justify-content: center;/* Centré par rapport à l'axe principal*/
+  align-items: center;
+}
+#cartes > article {
+  background-color: white;
+  width: 20%;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 20px;
+}
