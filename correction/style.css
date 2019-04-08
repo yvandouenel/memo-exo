@@ -1,0 +1,15 @@
+body{
+  background-color: grey;
+}
+body section {
+  display: flex;
+  flex-flow: row wrap;
+}
+body > section > article {
+  background-color: white;
+  border: 3px solid salmon;
+  width: 20%;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 8px;
+}
