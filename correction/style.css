@@ -1,14 +1,27 @@
 body{
   background-color: grey;
 }
-body section {
+/* Tableau */
+body section#tableau {
   display: flex;
   flex-flow: row wrap;
 }
-body > section > article {
+/* Colonne */
+body section#tableau .colonne {
+  width: 20%;
+  margin: 0 1%;
+  padding: 5px 1%;
+  border: 2px solid white;
+}
+/* Titre de la colonne */
+body section.colonne > h2 {
+  color: white;
+  font-family: arial;
+}
+/* Carte : l'article représente une carte */
+body > section > section > article {
   background-color: white;
   border: 3px solid salmon;
-  width: 20%;
   margin: 5px;
   padding: 5px;
   border-radius: 8px;

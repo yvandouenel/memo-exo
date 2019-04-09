@@ -37,7 +37,7 @@ class Carte {
 
   /** création de la méthode drawCarte qui est ajoutée au
    * prototype du constructeur de Carte */
-  drawCarte() {
+  drawCarte(colonne) {
     // création de l'élément texte de la question
     let textQuestion = document.createTextNode(this.question);
     // création de l'élément texte de la réponse
@@ -58,9 +58,8 @@ class Carte {
     this.elementArticle.appendChild(this.questionForm);
     this.elementArticle.appendChild(this.reponseForm);
 
-    // Enfin on ajoute à la section d'identité "cartes" l'élément du
-    // DOM qui correspond à la carte
-    document.getElementById("cartes").appendChild(this.elementArticle);
-
+    // Enfin on ajoute à la colonne passée en paramètre
+    // l'élément du DOM qui correspond à la carte
+    colonne.appendChild(this.elementArticle);
   }
 }
