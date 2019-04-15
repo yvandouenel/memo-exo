@@ -25,5 +25,4 @@ window.document.body.appendChild(cartes);
   carte.drawCarte();
   console.log(carte);
 }; */
-// création des colonnes
-const col1 = new Colonne("En cours d'apprentissage");
+const tableauHtml = new Tableau("HTML");

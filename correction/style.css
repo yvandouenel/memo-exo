@@ -2,7 +2,7 @@ body{
   background-color: grey;
 }
 /* Tableau */
-body section#tableau {
+body section#tableau section#colonnes {
   display: flex;
   flex-flow: row wrap;
 }
@@ -19,10 +19,22 @@ body section.colonne > h2 {
   font-family: arial;
 }
 /* Carte : l'article représente une carte */
-body > section > section > article {
+body > section > section > section > article {
   background-color: white;
   border: 3px solid salmon;
   margin: 5px;
-  padding: 5px;
+  padding: 5px 45px;
   border-radius: 8px;
+  position: relative;
 }
+body > section > section > section > article .fleche-droite {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+}
+body > section > section > section > article .fleche-gauche {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+}
+

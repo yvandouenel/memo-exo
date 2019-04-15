@@ -1,7 +1,9 @@
 class Colonne {
-  constructor(titre) {
+  constructor(titre, tableau) {
     // propriétés de la colonne
     this.titre = titre;
+    this.tableau = tableau; //passage par référence du tableau à la colonne
+    this.cartes = [];
 
     // création du boutton add
     this.elementButton = this.createBoutonAdd();
@@ -41,15 +43,25 @@ class Colonne {
     //ajout du bouton "buttonAdd" dans la colonne
     sectionColonne.appendChild(this.elementButton);
 
-    //ajout de la section colonne dans la section "tableau"
-    const tableau = document.getElementById("tableau");
-    tableau.appendChild(sectionColonne);
+    //ajout de la section colonne dans la section "colonnes"
+    const colonnes = document.getElementById("colonnes");
+    colonnes.appendChild(sectionColonne);
 
     return sectionColonne;
   }
   addCarte(){
     console.log("dans addCarte");
-    const carte = new Carte("question","réponse");
+
+    // récupération de l'index de la colonne
+    let index_col = this.tableau.colonnes.indexOf(this);//index de la colonne
+    const carte = new Carte("question","réponse", index_col, this.tableau);//appel du constructeur
+
+    // Ajout de la carte à la colonne
+    this.cartes.push(carte);
+
+    // dessin de la carte
     carte.drawCarte(this.sectionColonne);
+
+
   };
 }
